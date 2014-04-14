@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="4.8.3 -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=PerLoo.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\PerLoo -TC:\CooCox\CoIDE\configuration\ProgramData\PerLoo/arm-gcc-link.ld -g">
+      <target file="PerLoo.elf" lastModified="145622fcf29">
+         <source file="..\obj\startup_stm32f4xx.o" lastModified="145622fcb9e"/>
+         <source file="..\obj\main.o" lastModified="145622fcbdc"/>
+         <source file="..\obj\DHT.o" lastModified="145622fcc22"/>
+         <source file="..\obj\stm32f4xx_rcc.o" lastModified="145622fcca8"/>
+         <source file="..\obj\stm32f4xx_gpio.o" lastModified="145622fccf7"/>
+         <source file="..\obj\system_stm32f4xx.o" lastModified="145622fcd3c"/>
+      </target>
+   </processor>
+</history>

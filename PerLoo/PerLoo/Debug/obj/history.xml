@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m4 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F407VG -DSTM32F4XX -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace\PerLoo\cmsis_lib -I..\..\..\workspace -I..\..\..\workspace\PerLoo\cmsis -I..\..\..\workspace\PerLoo\cmsis_lib\include -I..\..\..\workspace\PerLoo\cmsis_boot -I..\..\..\workspace\PerLoo">
+      <target file="DHT.o" lastModified="145622fcc22">
+         <source file="..\..\..\cmsis_lib\source\DHT.c" lastModified="145622ed35b"/>
+      </target>
+      <target file="stm32f4xx_rcc.o" lastModified="145622fcca8">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="145622d90c4"/>
+      </target>
+      <target file="system_stm32f4xx.o" lastModified="145622fcd3c">
+         <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="145622d906f"/>
+      </target>
+      <target file="stm32f4xx_gpio.o" lastModified="145622fccf7">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="145622d905f"/>
+      </target>
+      <target file="main.o" lastModified="145622fcbdc">
+         <source file="..\..\..\main.c" lastModified="145622fbbe2"/>
+      </target>
+      <target file="startup_stm32f4xx.o" lastModified="145622fcb9e">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="145622d9066"/>
+      </target>
+   </processor>
+</history>
