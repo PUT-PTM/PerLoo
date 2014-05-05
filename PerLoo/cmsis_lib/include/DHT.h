@@ -14,4 +14,5 @@ typedef enum eError
 extern void DHT_Init(void);
 extern int DHT_readData(void);
 extern int przeliczTemp();
+extern int przeliczWilgotnosc();
 extern void wait_ms(volatile int ms);

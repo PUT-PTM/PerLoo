@@ -112,3 +112,14 @@ int przeliczTemp(){
 	}
 	return output;
 }
+
+int przeliczWilgotnosc(){
+	int i = 0;
+	int mnoznik = 256;
+	int output = 0;
+	for(i=0;i<8;i++){
+		output += wynik[i]*mnoznik;
+		mnoznik /= 2;
+	}
+	return output;
+}
