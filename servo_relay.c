@@ -6,21 +6,27 @@
 #include "stm32f4xx_syscfg.h"
 #include "misc.h"
 
+#define SERVO_MAX 90
+#define SERVO_MIN 25
+
 uint8_t need_for_water = 0;
 int period = 1000;
 int pres;
 void EXTI0_IRQHandler ( void ){
 	if( EXTI_GetITStatus ( EXTI_Line0 ) != RESET ){
-		need_for_water = need_for_water==0?1:0;
+		need_for_water = need_for_water==0?1:0; //zmiana stanu serwa
+
+		GPIO_ToggleBits(GPIOD, GPIO_Pin_5); //zmiana stanu przekaźnika
 
 	    EXTI_ClearITPendingBit ( EXTI_Line0 );
 	}
 }
 
-void init_timer_pwm(void);
-void init_leds(void);
+void init_timer_pwm(void); // wyjscie PWM na pinie PB0
+void init_leds_relay(void); //wyjscia sterujace PD5 i PD6
 void init_user_button(void);
 
+uint8_t zmienna = 0;
 int main(void)
 {
 
@@ -38,25 +44,25 @@ int main(void)
 	RCC_AHB1PeriphClockCmd ( RCC_AHB1Periph_GPIOA ,	ENABLE );
 	RCC_AHB1PeriphClockCmd ( RCC_AHB1Periph_GPIOD ,	ENABLE );
 
-	init_leds();
+	init_leds_relay();
 
     init_timer_pwm();
 
-	TIM3 -> CCR3 = 100; //+90 stopni - 5, -90 stopni - 100
+	TIM3 -> CCR3 = SERVO_MAX;
 
     init_user_button();
 
 	while (1){
 
-
+        zmienna = 78;
 		if(need_for_water == 1){
-			TIM3->CCR3 = 100;
+			TIM3->CCR3 = SERVO_MAX;
 		}else{
-			TIM3->CCR3 = 5;
+			TIM3->CCR3 = SERVO_MIN;
 		}
 	}
 }
-
+GPIO_InitTypeDef GPIO_InitStructure ;
 void init_timer_pwm(void){
 	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure ;
 	TIM_TimeBaseStructure . TIM_Period = period;
@@ -80,7 +86,7 @@ void init_timer_pwm(void){
 
 
 
-	GPIO_InitTypeDef GPIO_InitStructure ;
+
 	GPIO_InitStructure . GPIO_Pin = GPIO_Pin_0;
 	GPIO_InitStructure . GPIO_Mode = GPIO_Mode_AF ;
 	GPIO_InitStructure . GPIO_OType = GPIO_OType_PP ;
@@ -92,11 +98,13 @@ void init_timer_pwm(void){
 	TIM_Cmd (TIM3 , ENABLE );
 }
 
-void init_leds(void){
+void init_leds_relay(void){
 	GPIO_InitTypeDef GPIO_InitLeds;
 	GPIO_InitLeds . GPIO_Pin = GPIO_Pin_12 |
 	GPIO_Pin_13 | GPIO_Pin_14 |
-	GPIO_Pin_15 ;
+	GPIO_Pin_15 |
+	//for relay
+	GPIO_Pin_5 | GPIO_Pin_6;
 	GPIO_InitLeds . GPIO_Mode = GPIO_Mode_OUT ;
 	GPIO_InitLeds . GPIO_OType = GPIO_OType_PP ;
 	GPIO_InitLeds . GPIO_Speed =
