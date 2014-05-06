@@ -62,7 +62,7 @@ int main(void)
 		}
 	}
 }
-GPIO_InitTypeDef GPIO_InitStructure ;
+
 void init_timer_pwm(void){
 	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure ;
 	TIM_TimeBaseStructure . TIM_Period = period;
@@ -86,7 +86,7 @@ void init_timer_pwm(void){
 
 
 
-
+        GPIO_InitTypeDef GPIO_InitStructure ;
 	GPIO_InitStructure . GPIO_Pin = GPIO_Pin_0;
 	GPIO_InitStructure . GPIO_Mode = GPIO_Mode_AF ;
 	GPIO_InitStructure . GPIO_OType = GPIO_OType_PP ;
