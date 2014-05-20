@@ -1,13 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="4.8.3 -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=PerLoo.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\PerLoo -TC:\CooCox\CoIDE\configuration\ProgramData\PerLoo/arm-gcc-link.ld -g">
-      <target file="PerLoo.elf" lastModified="145622fcf29">
-         <source file="..\obj\startup_stm32f4xx.o" lastModified="145622fcb9e"/>
-         <source file="..\obj\main.o" lastModified="145622fcbdc"/>
-         <source file="..\obj\DHT.o" lastModified="145622fcc22"/>
-         <source file="..\obj\stm32f4xx_rcc.o" lastModified="145622fcca8"/>
-         <source file="..\obj\stm32f4xx_gpio.o" lastModified="145622fccf7"/>
-         <source file="..\obj\system_stm32f4xx.o" lastModified="145622fcd3c"/>
+   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=PerLoo.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\PerLoo -TC:\CooCox\CoIDE\configuration\ProgramData\PerLoo/arm-gcc-link.ld -g">
+      <target file="PerLoo.elf" lastModified="146192bc72f">
+         <source file="..\obj\stm32f4xx_syscfg.o" lastModified="146192bbd47"/>
+         <source file="..\obj\servo_relay.o" lastModified="146192bbe01"/>
+         <source file="..\obj\startup_stm32f4xx.o" lastModified="146192bbe77"/>
+         <source file="..\obj\main.o" lastModified="146192bbf06"/>
+         <source file="..\obj\DHT.o" lastModified="146192bbfab"/>
+         <source file="..\obj\stm32f4xx_rcc.o" lastModified="146192bc097"/>
+         <source file="..\obj\stm32f4xx_gpio.o" lastModified="146192bc146"/>
+         <source file="..\obj\system_stm32f4xx.o" lastModified="146192bc1e7"/>
+         <source file="..\obj\stm32f4xx_exti.o" lastModified="146192bc28c"/>
+         <source file="..\obj\misc.o" lastModified="146192bc329"/>
+         <source file="..\obj\stm32f4xx_tim.o" lastModified="146192bc4db"/>
       </target>
    </processor>
 </history>

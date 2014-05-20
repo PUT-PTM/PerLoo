@@ -115,9 +115,9 @@ int przeliczTemp(){
 
 int przeliczWilgotnosc(){
 	int i = 0;
-	int mnoznik = 256;
+	int mnoznik = 128;
 	int output = 0;
-	for(i=0;i<8;i++){
+	for(i=1;i<8;i++){
 		output += wynik[i]*mnoznik;
 		mnoznik /= 2;
 	}
