@@ -16,3 +16,7 @@
 *.exe
 *.out
 *.app
+*.elf
+*.bin
+*.map
+*.hex

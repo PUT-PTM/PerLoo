@@ -1,18 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
    <processor signature="arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=PerLoo.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\PerLoo -TC:\CooCox\CoIDE\configuration\ProgramData\PerLoo/arm-gcc-link.ld -g">
-      <target file="PerLoo.elf" lastModified="146192bc72f">
-         <source file="..\obj\stm32f4xx_syscfg.o" lastModified="146192bbd47"/>
-         <source file="..\obj\servo_relay.o" lastModified="146192bbe01"/>
-         <source file="..\obj\startup_stm32f4xx.o" lastModified="146192bbe77"/>
-         <source file="..\obj\main.o" lastModified="146192bbf06"/>
-         <source file="..\obj\DHT.o" lastModified="146192bbfab"/>
-         <source file="..\obj\stm32f4xx_rcc.o" lastModified="146192bc097"/>
-         <source file="..\obj\stm32f4xx_gpio.o" lastModified="146192bc146"/>
-         <source file="..\obj\system_stm32f4xx.o" lastModified="146192bc1e7"/>
-         <source file="..\obj\stm32f4xx_exti.o" lastModified="146192bc28c"/>
-         <source file="..\obj\misc.o" lastModified="146192bc329"/>
-         <source file="..\obj\stm32f4xx_tim.o" lastModified="146192bc4db"/>
+      <target file="PerLoo.elf" lastModified="14659be4a00">
+         <source file="..\obj\stm32f4xx_syscfg.o" lastModified="14659be425b"/>
+         <source file="..\obj\servo_relay_light.o" lastModified="14659be42ca"/>
+         <source file="..\obj\startup_stm32f4xx.o" lastModified="14659be4331"/>
+         <source file="..\obj\main.o" lastModified="14659be4399"/>
+         <source file="..\obj\DHT.o" lastModified="14659be4406"/>
+         <source file="..\obj\stm32f4xx_rcc.o" lastModified="14659be449a"/>
+         <source file="..\obj\stm32f4xx_adc.o" lastModified="14659be4527"/>
+         <source file="..\obj\stm32f4xx_gpio.o" lastModified="14659be4597"/>
+         <source file="..\obj\system_stm32f4xx.o" lastModified="14659be45f6"/>
+         <source file="..\obj\stm32f4xx_exti.o" lastModified="14659be4658"/>
+         <source file="..\obj\misc.o" lastModified="14659be46c3"/>
+         <source file="..\obj\stm32f4xx_tim.o" lastModified="14659be47ef"/>
       </target>
    </processor>
 </history>
