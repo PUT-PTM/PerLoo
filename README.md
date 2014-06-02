@@ -2,7 +2,7 @@
 ##Założenia
 Projekt zrealizowany na potrzeby przedmiotu Podstawy Techniki Mikroprocesorowej dziennych studiów inżynierskich na kierunku Informatyka uczelni Politechnika Poznańska w roku akademickim 2013/2014.
 
-Głównym założeniem było pokazanie nabytych umiejętności w obrębie techniki mikroprocesorowej, a w szczególności oprogramowanie wybranego przez siebie do projektu mikrokontrolera. 
+Głównym założeniem było pokazanie nabytych umiejętności w obrębie techniki mikroprocesorowej, a w szczególności oprogramowanie wybranego do projektu mikrokontrolera. 
 
 Kod źródłowy projektu zostaje opublikowany na zasadach licencji [MIT](http://opensource.org/licenses/MIT).
 ##Cele
@@ -22,10 +22,10 @@ Nakładka została zaprojektowana dla pojedynczej rośliny nieprzekraczającej:
 * 30cm średnicy przy maksymalnej wysokości  
 
 ##Realizacja
-Podstawą konstrukcji nakładki jest arkusz przezroczystego tworzywa grubości 0.5 mm zwinięty w stożek. Wewnątrz niego umieszczone są czujniki a na zewnątrz mikrokontroler oraz pozostałe urządzenia. Po wewnętrznej stronie stożka zamontowana została taśma z diodami LED zapalająca się w momencie wykrycia na fotorezystorze zbyt niskiego natężenia światła. Do zewnętrznej ściany konstrukcji został zamontowany serwonapęd, który przez otwór w tworzywie reguluje przepływ wody z zasobnika umieszczonego na zewnątrz. Ze względów bezpieczeństwa mikrokontroler oraz przekaźniki zostały zamontowane w szczelnym pudełku poza stożkiem. Na samym szczycie znajduje się grzałka, a nad nią bezgłośny wentylator wtłaczający powietrze do środka stożka. Powietrze przepływając przez grzałkę nagrzewa się i zwiększa temperaturę wokół rośliny. Wentylator wraz z grzałką jest uruchamiany w momencie spadku temperatury powietrza poniżej wartości granicznej.
+Podstawą konstrukcji nakładki jest arkusz przezroczystego tworzywa grubości 0.5 mm zwinięty w stożek. Wewnątrz niego umieszczone są czujniki a na zewnątrz mikrokontroler oraz pozostałe urządzenia. Po wewnętrznej stronie stożka zamontowana została taśma z diodami LED zapalająca się w momencie wykrycia na fotorezystorze zbyt niskiego natężenia światła. Do zewnętrznej ściany konstrukcji został przymocowany serwonapęd, który przez otwór w tworzywie reguluje przepływ wody z zasobnika umieszczonego na zewnątrz. Ze względów bezpieczeństwa mikrokontroler oraz przekaźniki zostały zamontowane w szczelnym pudełku poza stożkiem. Na samym szczycie znajduje się grzałka, a nad nią bezgłośny wentylator wtłaczający powietrze do środka stożka. Powietrze przepływając przez grzałkę nagrzewa się i zwiększa temperaturę wokół rośliny. Wentylator wraz z grzałką jest uruchamiany w momencie spadku temperatury powietrza poniżej wartości granicznej.
 
 - - -
-Projekt został w całości napisany w [CooCox IDE](http://www.coocox.org/index.html). 
+Projekt został w całości napisany w języku C w środowisku [CooCox IDE](http://www.coocox.org/index.html). Kompilacji dokonano przy pomocy GCC ARM toolchain.
 
 ###Użyte urządzenia:
 * Mikrokontroler: [STM32F4DISCOVERY](http://www.st.com/web/catalog/tools/FM116/SC959/SS1532/PF252419)
@@ -35,10 +35,11 @@ Projekt został w całości napisany w [CooCox IDE](http://www.coocox.org/index.
 * Wentylator: [AAB Cooling Super Silent Fan 12](http://www.komputronik.pl/product/87199/Sprzet_komputerowy_/Podzespoly/AAB_Cooling_Super_Silent_Fan_12.html)
 * Oświetlenie: taśma LED SMD 12V
 * Grzałka
+* Fotorezystor
 
 
 ## Skład zespołu:
-* Bartosz Schiller
+* Bartosz Schiller ([GitHub](https://github.com/barteksc))
 * Adrian Moczulski
 * Rafał Kitta ([GitHub](https://github.com/rafalkitta))
 
